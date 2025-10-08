@@ -5,19 +5,19 @@ const BestOffer = () => {
 
      const offer = [
     {
-      img: "/bestOffer/Frame68.png",
+      img: "/bestoffer/Frame68.png",
       
     },
     {
-      img: "/bestOffer/Frame69.png",
+      img: "/bestoffer/Frame69.png",
      
     },
     {
-      img: "/bestOffer/Frame70.png",
+      img: "/bestoffer/Frame70.png",
       
     },
     {
-      img: "/bestOffer/Frame71.png",
+      img: "/bestoffer/Frame71.png",
 
     },
   ];

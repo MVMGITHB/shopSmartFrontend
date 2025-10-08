@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -55,7 +55,9 @@ const offers = [
 const FashionOffer = () => {
   const cardsRef = useRef([]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+
+     const ctx = gsap.context(() => {
     
     cardsRef.current.forEach((card, index) => {
       gsap.from(card, {
@@ -71,6 +73,13 @@ const FashionOffer = () => {
         ease: "power3.out",
       });
     });
+
+     });
+
+   
+    return () => ctx.revert();
+
+
   }, []);
 
   return (

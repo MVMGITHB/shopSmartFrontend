@@ -1,5 +1,5 @@
 "use client";
-import React , { useEffect, useRef }  from "react";
+import React , { useLayoutEffect, useRef }  from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,8 +9,8 @@ const PopularBrand = () => {
 
     const cardsRef = useRef([]);
 
-  useEffect(() => {
-    
+  useLayoutEffect(() => {
+     const ctx = gsap.context(() => {
     cardsRef.current.forEach((card, index) => {
       gsap.from(card, {
         scrollTrigger: {
@@ -25,6 +25,10 @@ const PopularBrand = () => {
         ease: "power3.out",
       });
     });
+     });
+
+   
+    return () => ctx.revert();
   }, []);
 
   const brands = [

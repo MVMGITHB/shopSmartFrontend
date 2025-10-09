@@ -27,10 +27,10 @@ const Footer = () => {
     {
       label: "Company",
       items: [
-        { href: "/fashion-coupon", name: "Fashion Coupon" },
-         { href: "/electronic-coupon", name: "Electronic Coupon" },
-        { href: "/food-coupon", name: "Food Coupon" },
-        { href: "/travel-coupon", name: "Travel Coupon" },
+        { href: "/#", name: "Fashion Coupon" },
+         { href: "/#", name: "Electronic Coupon" },
+        { href: "/#", name: "Food Coupon" },
+        { href: "/#", name: "Travel Coupon" },
       ],
     },
 
@@ -38,9 +38,9 @@ const Footer = () => {
     {
       label: "Resources",
       items: [
-         { href: "/about-us", name: "About Us" },
-         { href: "/terms-conditions", name: "Terms And Codition" },
-        { href: "/privacy-policy", name: "Privacy Policy" },
+         { href: "/#", name: "About Us" },
+         { href: "/#", name: "Terms And Codition" },
+        { href: "/#", name: "Privacy Policy" },
       ],
     },
 
@@ -48,14 +48,14 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#ffffff] border-t text-gray-300 py-10 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#ffffff]  box-shadow-top text-gray-300 py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-screen-xl mx-auto">
         {/* Top: Newsletter */}
         <div className="flex flex-col md:flex-row justify-between items-center border-b border-[#333] pb-6 gap-4">
           <div className="text-center md:text-left">
             <h2 className="text-gray-900 text-xl font-semibold">
               Stay Updated with{" "}
-              <span className="text-yellow-400">Coupons Culture</span>
+              <span className="text-orange-600">Coupons Culture</span>
             </h2>
             <p className="text-xs text-gray-900 mt-1">
               Get the latest trending coupons and updates in your inbox.
@@ -70,9 +70,9 @@ const Footer = () => {
               type="email"
               required
               placeholder="Your email"
-              className="flex-1 px-3 py-2 text-sm rounded-md text-gray-900 bg-white border border-gray-900 focus:border-yellow-400 outline-none"
+              className="flex-1 px-3 py-2 text-sm rounded-md text-gray-900 bg-white border border-gray-900 focus:border-orange-400 outline-none"
             />
-            <button className="bg-yellow-400 text-black px-4 py-2 text-sm font-medium rounded-md hover:bg-yellow-500 transition shadow">
+            <button className="bg-orange-500 text-white px-4 py-2 text-sm font-medium rounded-md hover:bg-orange-500 transition shadow">
               Subscribe
             </button>
           </form>
@@ -90,7 +90,7 @@ const Footer = () => {
                   <li key={index}>
                     <Link
                       href={item.href}
-                      className="hover:text-yellow-400 transition-colors text-black"
+                      className="hover:text-orange-400 transition-colors text-black"
                     >
                       {item.name}
                     </Link>
@@ -138,7 +138,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     href={item.href}
-                    className="hover:text-yellow-400 transition-colors text-black"
+                    className="hover:text-orange-400 transition-colors text-black"
                   >
                     {item.name}
                   </Link>
@@ -156,25 +156,25 @@ const Footer = () => {
           <div className="flex flex-wrap gap-3 justify-center md:justify-end">
             <Link
               href="#"
-              className="flex items-center gap-1 hover:text-yellow-400 transition"
+              className="flex items-center gap-1 hover:text-orange-400 transition"
             >
               <FaFacebook size={16} /> Facebook
             </Link>
             <Link
               href="#"
-              className="flex items-center gap-1 hover:text-yellow-400 transition"
+              className="flex items-center gap-1 hover:text-orange-400 transition"
             >
               <FaTwitter size={16} /> Twitter
             </Link>
             <Link
               href="#"
-              className="flex items-center gap-1 hover:text-yellow-400 transition"
+              className="flex items-center gap-1 hover:text-orange-400 transition"
             >
               <FaGithub size={16} /> GitHub
             </Link>
             <Link
               href="#"
-              className="flex items-center gap-1 hover:text-yellow-400 transition"
+              className="flex items-center gap-1 hover:text-orane-400 transition"
             >
               <FaInstagram size={16} /> Instagram
             </Link>

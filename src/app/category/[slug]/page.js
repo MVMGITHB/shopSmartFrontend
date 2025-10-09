@@ -1,0 +1,51 @@
+import React from 'react'
+import Fashion from '@/components/fashion/Fashion';
+import CategoryMain from '@/components/category/CategoryMain';
+
+const categoryData = {
+  fashion: {
+    title: "Fashion",
+    desc: "High Style,<br/>High Saving<br/>Your Fashion<br/>Sale Starts Here!",
+    banner: "/category/Frame72.png",
+  },
+  electronics: {
+    title: "Electronics",
+    desc: "Gadgets<br/> You’ll Love,<br/> Prices <br/> You’ll Love More.",
+    banner: "/category/Frame73.png",
+  },
+  homekitchen: {
+    title: "Home & Kitchen",
+    desc: "Delicious <br/> Deals <br/> in Every Bite",
+    banner: "/category/Frame74.png",
+  },
+  beauty: {
+    title: "Beauty & Grooming",
+    desc: "Discover <br/> Top Beauty <br/> Brands <br/> and  Products.",
+    banner: "/fashion/Frame72.png",
+  },
+  flightshotels: {
+    title: "Flights & Hotels",
+    desc: "Save <br/> on your <br/> next travel <br/> booking.",
+    banner: "/fashion/Frame72.png",
+  },
+};
+
+const page = ({ params }) => {
+   const data = categoryData[params.slug];
+   console.log("data " , data)
+   
+//     const data = categoryData[slug] || {
+//     title: "Category Not Found",
+//     desc: "The page you're looking for doesn't exist.",
+//     banner: "/default-banner.png",
+//   };
+
+  return (
+    <div>
+        <CategoryMain data={data} />
+      
+    </div>
+  )
+}
+
+export default page

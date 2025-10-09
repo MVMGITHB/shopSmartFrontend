@@ -24,7 +24,15 @@ const FashionHero = () => {
       });
 
       gsap.to(imageRef.current, {
-        y: 15,
+        y: 20,
+        duration: 2,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
+
+      gsap.to(headingRef.current, {
+        x: 25,
         duration: 2,
         repeat: -1,
         yoyo: true,
@@ -47,10 +55,10 @@ const FashionHero = () => {
   }, []);
 
   return (
-    <section className="bg-gray-100 pt-[110px] px-5 overflow-hidden">
+    <section className="bg-gray-100 pt-[110px] px-5  pb-[10px] overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between gap-12">
         <div className="w-full lg:w-1/2" ref={imageRef}>
-          <div className="rounded-2xl overflow-hidden shadow-lg">
+          <div className="rounded-2xl overflow-hidden  ">
             <Image
               src="/fashion/Frame72.png"
               alt="Fashion Sale Banner"

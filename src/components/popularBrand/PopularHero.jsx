@@ -8,7 +8,7 @@ gsap.registerPlugin(TextPlugin);
 
 const PopularHero = ({data}) => {
 
- console.log("Banner data is " , data?.data)
+ console.log("Banner data is " , data)
   const imageRef = useRef(null);
   const image1Ref = useRef(null);
   const image2Ref = useRef(null);
@@ -62,8 +62,8 @@ const PopularHero = ({data}) => {
            <div className="w-full lg:w-[950]" ref={imageRef}>
              <div className="rounded-2xl overflow-hidden  ">
               <Image
-                 src={data?.data?.banner}
-                 alt={data?.data?.title || "Category Banner"}
+                 src={data?.banner}
+                 alt={data?.title || "Category Banner"}
                  width={700}
                  height={500}
                  className="object-cover w-full h-auto"
@@ -75,8 +75,8 @@ const PopularHero = ({data}) => {
            <div className="abril-fatface-regular  lg:w-1/2 flex flex-col items-start justify-center gap-10 ">
             <div className=" overflow-hidden  " ref={image1Ref} >
               <Image
-                 src={data?.data?.image1}
-                 alt={data?.data?.title || "Category Banner"}
+                 src={data?.image1}
+                 alt={data?.title || "Category Banner"}
                  width={457}
                  height={210}
                  className="object-cover  h-auto"
@@ -85,8 +85,8 @@ const PopularHero = ({data}) => {
              </div>
              <div className=" overflow-hidden " ref={image2Ref}>
               <Image
-                 src={data?.data?.image2}
-                 alt={data?.data?.title || "Category Banner"}
+                 src={data?.image2}
+                 alt={data?.title || "Category Banner"}
                  width={457}
                  height={210}
                  className="object-cover h-auto"

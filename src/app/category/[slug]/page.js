@@ -31,7 +31,12 @@ const categoryData = {
 };
 
 const page = ({ params }) => {
-   const data = categoryData[params.slug];
+
+
+  const {slug} =  params;
+
+  
+   const data = categoryData[slug];
    console.log("data " , data)
    
 //     const data = categoryData[slug] || {
@@ -42,7 +47,7 @@ const page = ({ params }) => {
 
   return (
     <div>
-        <CategoryMain data={data} />
+        <CategoryMain data={data}  slug={slug}/>
       
     </div>
   )

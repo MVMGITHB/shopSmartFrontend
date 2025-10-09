@@ -8,7 +8,7 @@ gsap.registerPlugin(TextPlugin);
 
 const CategoryHero = ({data}) => {
 
-  console.log("Banner data is " , data?.data?.banner)
+  console.log("Banner data is " , data?.banner)
   const imageRef = useRef(null);
   const headingRef = useRef(null);
 
@@ -44,7 +44,7 @@ const CategoryHero = ({data}) => {
       // const fullText =
       //   "High Style,<br/>High Saving<br/>Your Fashion<br/>Sale Starts Here!";
 
-      const fullText = `${data?.data?.desc}`
+      const fullText = `${data?.desc}`
       gsap.to(headingRef.current, {
         duration: 2,
         text: fullText,
@@ -60,11 +60,11 @@ const CategoryHero = ({data}) => {
   return (
     <section className="bg-gray-100 pt-[110px] px-5  pb-[10px] overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between gap-12">
-        <div className="w-full lg:w-1/2" ref={imageRef}>
+        <div className="w-full lg:w-[950]" ref={imageRef}>
           <div className="rounded-2xl overflow-hidden  ">
            <Image
-              src={data?.data?.banner}
-              alt={data?.data?.title || "Category Banner"}
+              src={data?.banner}
+              alt={data?.title || "Category Banner"}
               width={700}
               height={500}
               className="object-cover w-full h-auto"

@@ -118,7 +118,7 @@ const HeroSection = () => {
                       className="object-contain"
                     />
                   </div>
-                  <p className="mt-3 font-medium text-[13px] sm:text-[10px]">
+                  <p className="mt-3 font-medium text-[12px] sm:text-[16px]">
                     {cat.name}
                   </p>
                 </Link>

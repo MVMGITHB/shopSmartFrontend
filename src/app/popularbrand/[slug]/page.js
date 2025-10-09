@@ -40,9 +40,10 @@ const PopularBrand = {
 };
 
 const page = ({ params }) => {
-  console.log("params =>", params);
+//   console.log("params =>", params);
+  const {slug} =  params;
 
-  const data = PopularBrand[params?.slug];
+  const data = PopularBrand[slug];
 
   if (!data) {
     return (
@@ -54,7 +55,7 @@ const page = ({ params }) => {
 
   return (
     <div>
-      <PopularMain data={data} />
+      <PopularMain data={data} slug={slug} />
     </div>
   );
 };

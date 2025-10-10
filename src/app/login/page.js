@@ -1,17 +1,18 @@
+import LoginPage from '@/components/auth/LoginPage'
 import Footer from '@/components/footer/Footer'
 import Nav from '@/components/header/Nav'
-import PopularBrand from '@/components/popularBrand/PopularBrand'
 import React from 'react'
 
 const page = () => {
   return (
     <div>
+
         <Nav/>
-        <div className='mt-25'>
-            <PopularBrand/>
-        </div>
-        <Footer/>
-      
+       
+      <LoginPage/>
+      <Footer/>
+
+    
     </div>
   )
 }

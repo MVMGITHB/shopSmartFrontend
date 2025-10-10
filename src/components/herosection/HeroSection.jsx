@@ -47,7 +47,7 @@ const HeroSection = () => {
   }, [current]);
 
   return (
-    <section className="bg-gray-100 py-10 mt-[100px] overflow-hidden">
+    <section className="bg-gray-100 py-10 mt-[80px] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
        
         <div className="mb-10 relative overflow-hidden">
@@ -103,7 +103,7 @@ const HeroSection = () => {
 
        
         <div className="text-center">
-          <h2 className="text-2xl font-semibold  mb-8">Top Categories</h2>
+          <h2 className="abril-fatface-regular text-2xl font-semibold  mb-8">Top Categories</h2>
 
           <div className="flex flex-wrap justify-center gap-10">
             {categories.map((cat, index) => (

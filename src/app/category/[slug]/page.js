@@ -15,17 +15,17 @@ const categoryData = {
   },
   homekitchen: {
     title: "Home & Kitchen",
-    desc: "Delicious <br/> Deals <br/> in Every Bite",
+    desc: "Home & <br/> Kitchen <br/> Deals That <br/> Spark Joy",
     banner: "/category/Frame74.png",
   },
   beauty: {
     title: "Beauty & Grooming",
-    desc: "Discover <br/> Top Beauty <br/> Brands <br/> and  Products.",
+    desc: "Beauty & <br/> Grooming <br/> Deals That <br/> Make You Glow",
     banner: "/fashion/Frame72.png",
   },
   flightshotels: {
     title: "Flights & Hotels",
-    desc: "Save <br/> on your <br/> next travel <br/> booking.",
+    desc: "Flights <br/> & Hotels <br/> Deals for <br/> Smart Getaways.",
     banner: "/fashion/Frame72.png",
   },
 };

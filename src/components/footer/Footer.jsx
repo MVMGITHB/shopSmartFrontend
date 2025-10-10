@@ -55,7 +55,7 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <h2 className="text-gray-900 text-xl font-semibold">
               Stay Updated with{" "}
-              <span className="text-orange-600">Coupons Culture</span>
+              <span className="text-orange-600">Shopsmart</span>
             </h2>
             <p className="text-xs text-gray-900 mt-1">
               Get the latest trending coupons and updates in your inbox.

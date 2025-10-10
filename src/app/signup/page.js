@@ -1,17 +1,14 @@
+import SignupPage from '@/components/auth/SignupPage'
 import Footer from '@/components/footer/Footer'
 import Nav from '@/components/header/Nav'
-import PopularBrand from '@/components/popularBrand/PopularBrand'
 import React from 'react'
 
 const page = () => {
   return (
     <div>
         <Nav/>
-        <div className='mt-25'>
-            <PopularBrand/>
-        </div>
-        <Footer/>
-      
+      <SignupPage/>
+      <Footer/>
     </div>
   )
 }

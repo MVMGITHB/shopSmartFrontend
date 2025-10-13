@@ -1,14 +1,13 @@
-import LoginPage from '@/components/auth/LoginPage'
-import Footer from '@/components/footer/Footer'
-import Nav from '@/components/header/Nav'
+import AboutUsMain from '@/components/aboutus/AboutUsMain'
+import TermMain from '@/components/termAndCondition/TermMain'
 import React from 'react'
 
 
 export const metadata = {
   title:
-    "Shopsmart Login Page | Shopsmart – fashion, coupon & Discount",
+    "Term And Conditon | Shopsmart – fashion, coupon & Discount",
   description:
-    "Shopsmart Login Page",
+    "Discover Shopsmart, provide coupons and discount ",
   metadataBase: new URL("https://shopsmaart.com/"),
   alternates: {
     canonical: "./",
@@ -22,13 +21,7 @@ export const metadata = {
 const page = () => {
   return (
     <div>
-
-        <Nav/>
-       
-      <LoginPage/>
-      <Footer/>
-
-    
+      <TermMain/>
     </div>
   )
 }

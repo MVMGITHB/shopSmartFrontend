@@ -7,6 +7,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import toast from "react-hot-toast";
 import { BASE_URL } from "../helper/Helper";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,15 +61,18 @@ const CategoryOffer = ({couponData}) => {
   console.log("coupondata is" , couponData)
   const cardsRef = useRef([]);
 
+  
   useLayoutEffect(() => {
+  if (!cardsRef.current.length) return;
 
-     const ctx = gsap.context(() => {
-    
+  const ctx = gsap.context(() => {
+    ScrollTrigger.defaults({ markers: false }); // set true for debug
+
     cardsRef.current.forEach((card, index) => {
       gsap.from(card, {
         scrollTrigger: {
           trigger: card,
-          start: "top 85%", 
+          start: "top 85%",
           toggleActions: "play none none reverse",
         },
         opacity: 0,
@@ -77,14 +82,11 @@ const CategoryOffer = ({couponData}) => {
         ease: "power3.out",
       });
     });
+  });
 
-     });
+  return () => ctx.revert();
+}, [couponData]);
 
-   
-    return () => ctx.revert();
-
-
-  }, []);
 
   const handleOfferClick = (e, offer) => {
     e.preventDefault(); 
@@ -105,8 +107,11 @@ const CategoryOffer = ({couponData}) => {
   };
 
   return (
-    <section className="bg-gray-100 py-14">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="relative overflow-hidden bg-gray-100 py-14">
+
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4 ">
+         <div className="max-w-7xl mx-auto px-4">
        
 
 
@@ -122,7 +127,7 @@ const CategoryOffer = ({couponData}) => {
   
 
       <div  onClick={(e) => handleOfferClick(e, offer)}
-                 className=" cursor-pointer bg-gray-100 box-shadow-all rounded-tl-xl rounded-tr-xl flex flex-col items-center justify-between p-5 sm:p-6 h-[220px] sm:h-[260px] hover:shadow-xl transition-all duration-300">
+                 className=" cursor-pointer bg-white-100 box-shadow-all rounded-tl-xl rounded-tr-xl flex flex-col items-center justify-between p-5 sm:p-6 h-[220px] sm:h-[260px] hover:shadow-xl transition-all duration-300">
        <div className="h-12 w-28 mb-3 flex items-center justify-center overflow-hidden">
   <Image
     src={`https://api.shopsmaart.com${offer?.brand?.logo}`}
@@ -157,6 +162,9 @@ const CategoryOffer = ({couponData}) => {
 )}
 
       </div>
+      </div>
+      
+     
     </section>
   );
 };

@@ -120,15 +120,15 @@ const Nav = () => {
 
        
         <div className="hidden md:flex items-center text-[16px] gap-4 text-gray-900">
-          <a href="#" className="hover:text-orange-600">
+          {/* <a href="#" className="hover:text-orange-600">
             Help
-          </a>
-          <span className="text-gray-400">|</span>
+          </a> */}
+          {/* <span className="text-gray-400">|</span> */}
           <div>
             <Link href="/login" className="hover:text-orange-600">
               Login
             </Link>
-            <span className="text-gray-400">/</span>
+            <span className="text-gray-700">/</span>
             <Link href="/signup" className="hover:text-orange-600">
               Signup
             </Link>
@@ -181,9 +181,9 @@ const Nav = () => {
           </div>
 
           <div className="flex gap-3 text-gray-900">
-            <a href="#" className="hover:text-orange-600">
+            {/* <a href="#" className="hover:text-orange-600">
               Help
-            </a>
+            </a> */}
             <Link href="/login" className="hover:text-orange-600">
               Login
             </Link>

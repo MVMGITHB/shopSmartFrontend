@@ -103,7 +103,7 @@ const HeroSection = () => {
 
        
         <div className="text-center">
-          <h2 className="abril-fatface-regular text-2xl font-semibold  mb-8">Top Categories</h2>
+          <h2 className=" text-2xl font-semibold  mb-8">Top Categories</h2>
 
           <div className="flex flex-wrap justify-center gap-10">
             {categories.map((cat, index) => (

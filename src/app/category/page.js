@@ -1,6 +1,23 @@
 import Category from '@/components/category/Category'
 import React from 'react'
 
+
+
+export const metadata = {
+  title:
+    "Category| shopsmart – All Category , fashion , electronics , flightandhotels",
+  description:
+    "Discover Supernpro, your reliable platform for daily news, stock market trends, PF updates, and tax tips. Stay informed with expert-driven, verified, and easy-to-understand insights every day.",
+  metadataBase: new URL("https://shopsmaart.com/"),
+  alternates: {
+    canonical: "./",
+  },
+  // robots: {
+  //   index: false,
+  //   follow: false,
+  // },
+};
+
 const categoryData = {
   fashion: {
     title: "Fashion",

@@ -72,7 +72,7 @@ const PopularHero = ({data}) => {
              </div>
            </div>
    
-           <div className="abril-fatface-regular  lg:w-1/2 flex flex-col items-start justify-center gap-10 ">
+           <div className="  lg:w-1/2 flex flex-col items-start justify-center gap-10 ">
             <div className=" overflow-hidden  " ref={image1Ref} >
               <Image
                  src={data?.image1}

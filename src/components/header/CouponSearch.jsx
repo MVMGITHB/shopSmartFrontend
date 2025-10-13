@@ -55,15 +55,14 @@ const CouponSearch = () => {
 
   return (
     <div className=" hidden md:block relative w-[300px] ">
-      {/* Search Bar */}
-      {/* fix gap between search input and search button */}
+     
 <div className="hidden md:flex items-center w-full  bg-white px-4 py-2 gap-[5px] ">
         <Input
           type="text"
           placeholder="Search Products"
           value={query}
           onChange={handleInputChange}
- className="w-full px-4 py-2 rounded-md bg-white/10 text-gray-600 placeholder:text-gray-400 border border-gray-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all duration-200"
+ className="w-full px-4 py-2 rounded-md bg-white/10 text-gray-600 placeholder:text-gray-700 border border-gray-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all duration-200"
         />
         <Button
           size="icon"

@@ -44,7 +44,7 @@ const PopularBrand = () => {
     <section className="bg-gray-100 py-10">
       <div className="max-w-7xl mx-auto px-4">
         
-        <h2 className="abril-fatface-regular text-2xl font-semibold mb-8 text-center">Most Popular Brands</h2>
+        <h2 className=" text-2xl font-semibold mb-8 text-center">Most Popular Brands</h2>
 
        
         <div className="flex md:grid md:grid-cols-5 gap-4 overflow-x-auto md:overflow-visible scrollbar-hide pb-3">

@@ -27,10 +27,10 @@ const Footer = () => {
     {
       label: "Company",
       items: [
-        { href: "/#", name: "Fashion Coupon" },
-         { href: "/#", name: "Electronic Coupon" },
-        { href: "/#", name: "Food Coupon" },
-        { href: "/#", name: "Travel Coupon" },
+        { href: "/category/fashion", name: "Fashion Coupon" },
+         { href: "/category/electronics", name: "Electronic Coupon" },
+        { href: "/category/homekitchen", name: "Food Coupon" },
+        { href: "/category/flightshotels", name: "Travel Coupon" },
       ],
     },
 
@@ -38,9 +38,9 @@ const Footer = () => {
     {
       label: "Resources",
       items: [
-         { href: "/#", name: "About Us" },
-         { href: "/#", name: "Terms And Codition" },
-        { href: "/#", name: "Privacy Policy" },
+         { href: "/aboutus", name: "About Us" },
+         { href: "/termandcondition", name: "Terms And Codition" },
+        { href: "/privacy", name: "Privacy Policy" },
       ],
     },
 
@@ -50,7 +50,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#ffffff]  box-shadow-top text-gray-300 py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-screen-xl mx-auto">
-        {/* Top: Newsletter */}
+      
         <div className="flex flex-col md:flex-row justify-between items-center border-b border-[#333] pb-6 gap-4">
           <div className="text-center md:text-left">
             <h2 className="text-gray-900 text-xl font-semibold">
@@ -155,13 +155,13 @@ const Footer = () => {
           <p>© 2025 Coupons Culture. All rights reserved.</p>
           <div className="flex flex-wrap gap-3 justify-center md:justify-end">
             <Link
-              href="#"
+              href="https://www.facebook.com/shopsmaart/"
               className="flex items-center gap-1 hover:text-orange-400 transition"
             >
               <FaFacebook size={16} /> Facebook
             </Link>
             <Link
-              href="#"
+              href=""
               className="flex items-center gap-1 hover:text-orange-400 transition"
             >
               <FaTwitter size={16} /> Twitter
@@ -173,7 +173,7 @@ const Footer = () => {
               <FaGithub size={16} /> GitHub
             </Link>
             <Link
-              href="#"
+              href="https://www.instagram.com/shopsmaart/"
               className="flex items-center gap-1 hover:text-orane-400 transition"
             >
               <FaInstagram size={16} /> Instagram

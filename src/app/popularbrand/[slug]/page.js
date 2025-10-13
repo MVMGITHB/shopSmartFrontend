@@ -1,6 +1,79 @@
 import PopularMain from '@/components/popularBrand/PopularMain';
 import React from 'react';
 
+
+const seoBrand = [
+  {
+  slug:"flipkart",
+  title:"Flipkart | shopsmart",
+  description:"High Style , High Saving Your Fashion Sale Starts Here!"
+  },
+  {
+  slug:"ajio",
+  title:"ajio | shopsmart | Gadgets You’ll Love, Prices You’ll Love More",
+  description:"High Style , High Saving Your Fashion Sale Starts Here!"
+  },
+  {
+  slug:"levis",
+  title:"levis |shopsmart ",
+  description:"High Style , High Saving Your Fashion Sale Starts Here!"
+  },
+  {
+  slug:"myntra",
+  title:"myntra | shopsmart",
+  description:"High Style , High Saving Your Fashion Sale Starts Here!"
+  },
+  {
+  slug:"markspencer",
+  title:"markspencer| shopsmart",
+  description:"High Style , High Saving Your Fashion Sale Starts Here!"
+  }
+
+]
+
+
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+
+  try {
+    
+    const post = seoBrand.filter((item) => {
+  return item.slug === slug;
+});
+
+
+    if (!post) {
+      return {
+        title: "Post not found",
+        description: "This blog post could not be found.",
+        // robots: {
+        //   index: false,
+        //   follow: false,
+        // },
+      };
+    }
+
+   return {
+      title: `${post[0].title}`,
+      description: `${post[0].description}`,
+      metadataBase: new URL('https://shopsmaart.com/'),
+    alternates: {
+      canonical: './',
+
+    },
+    
+    };
+  } catch (error) {
+    return {
+      title: "Error loading post",
+      description: "An error occurred while fetching post data.",
+    };
+  }
+}
+
+
+
 const PopularBrand = {
   flipkart: {
     title: "Flipkart",

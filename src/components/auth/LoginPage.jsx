@@ -75,9 +75,9 @@ const LoginForm = () => {
               type="email"
               name="email"
               required
-              className="peer w-full border border-gray-300 bg-transparent rounded-xl px-4 pt-5 pb-2 text-gray-800 focus:border-orange-500 focus:outline-none transition-all duration-300"
+              className="peer w-full border border-gray-700  bg-transparent rounded-xl px-4 pt-5 pb-2 text-gray-800 focus:border-orange-500 focus:outline-none transition-all duration-300"
             />
-            <label className="absolute left-4 top-2.5 text-gray-500 text-sm transition-all duration-300 peer-focus:text-orange-500 peer-focus:-translate-y-3 peer-focus:text-xs peer-valid:-translate-y-3 peer-valid:text-xs">
+            <label className="absolute left-4 top-2.5 text-gray-700 text-sm transition-all duration-300 peer-focus:text-orange-500 peer-focus:-translate-y-3 peer-focus:text-xs peer-valid:-translate-y-3 peer-valid:text-xs">
               Email Address
             </label>
           </div>
@@ -88,13 +88,13 @@ const LoginForm = () => {
               type={showPassword ? "text" : "password"}
               name="password"
               required
-              className="peer w-full border border-gray-300 bg-transparent rounded-xl px-4 pt-5 pb-2 text-gray-800 focus:border-orange-500 focus:outline-none transition-all duration-300"
+              className="peer w-full border border-gray-700 bg-transparent rounded-xl px-4 pt-5 pb-2 text-gray-800 focus:border-orange-500 focus:outline-none transition-all duration-300"
             />
-            <label className="absolute left-4 top-2.5 text-gray-500 text-sm transition-all duration-300 peer-focus:text-orange-500 peer-focus:-translate-y-3 peer-focus:text-xs peer-valid:-translate-y-3 peer-valid:text-xs">
+            <label className="absolute left-4 top-2.5 text-gray-700 text-sm transition-all duration-300 peer-focus:text-orange-500 peer-focus:-translate-y-3 peer-focus:text-xs peer-valid:-translate-y-3 peer-valid:text-xs">
               Password
             </label>
             <div
-              className="absolute right-4 top-4 cursor-pointer text-gray-500 hover:text-orange-500 transition-all"
+              className="absolute right-4 top-4 cursor-pointer text-gray-700 hover:text-orange-500 transition-all"
               onClick={() => setShowPassword(!showPassword)}
             >
               {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}

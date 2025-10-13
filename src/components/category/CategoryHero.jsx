@@ -60,14 +60,14 @@ const CategoryHero = ({data}) => {
   return (
     <section className="bg-gray-100 pt-[110px] px-5  pb-[10px] overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between gap-12">
-        <div className="w-full lg:w-[950]" ref={imageRef}>
-          <div className="rounded-2xl overflow-hidden  ">
+        <div className=" w-full lg:w-[950]" ref={imageRef}>
+          <div className=" rounded-2xl overflow-hidden  ">
            <Image
               src={data?.banner}
               alt={data?.title || "Category Banner"}
               width={700}
               height={500}
-              className="object-cover w-full h-auto"
+              className="object-cover w-full h-auto box-shadow-all"
               priority
             />
           </div>

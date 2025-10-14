@@ -34,18 +34,22 @@ const BestOffer = () => {
      const offer = [
     {
       img: "/bestoffer/Frame68.png",
+      title:"Frame68.png"
       
     },
     {
       img: "/bestoffer/Frame69.png",
+      title:"Frame69.png"
      
     },
     {
       img: "/bestoffer/Frame70.png",
+      title:"Frame70.png"
       
     },
     {
       img: "/bestoffer/Frame71.png",
+      title:"Frame71.png"
 
     },
   ];

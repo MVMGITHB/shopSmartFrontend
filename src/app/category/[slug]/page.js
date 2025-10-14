@@ -38,7 +38,7 @@ const seodata = [
 export async function generateMetadata({ params }) {
   const { slug } = await params;
 
-  console.log("slug naem ", slug)
+  // console.log("slug naem ", slug)
 
   try {
     
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }) {
 });
 
 
-console.log("post dat ", post)
+// console.log("post dat ", post)
 
 
     if (!post) {

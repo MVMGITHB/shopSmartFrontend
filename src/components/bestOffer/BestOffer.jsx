@@ -68,6 +68,7 @@ const BestOffer = () => {
                       alt={deal.title}
                       width={380}
                       height={100}
+                      loading="lazy"
                       className="object-cover w-full h-full"
                     />
                   </div>

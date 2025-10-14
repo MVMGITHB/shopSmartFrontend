@@ -52,22 +52,22 @@ const SearchMobile = () => {
 
   return (
     <div className="md:hidden relative w-[200px] mt-2">
-      {/* Search Bar */}
-     <div className="flex items-center justify-center">
-  <Input
-    type="text"
-    placeholder="Search Products"
-    value={query}
-    onChange={handleInputChange}
- className="w-full px-4 py-2 rounded-md bg-white/10 text-gray-600 placeholder:text-gray-700 border border-gray-700 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all duration-200"
-  />
-  <Button
-    size="icon"
+
+      <div className="flex items-center justify-center">
+        <Input
+          type="text"
+          placeholder="Search Products"
+          value={query}
+          onChange={handleInputChange}
+          className="w-full px-4 py-2 rounded-md bg-white/10 text-gray-600 placeholder:text-gray-700 border border-gray-700 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all duration-200"
+        />
+        <Button
+          size="icon"
           className=" bg-orange-500 hover:bg-[#4e5ac2] text-white"
-  >
-    <MdSearch className="text-xl" />
-  </Button>
-</div>
+        >
+          <MdSearch className="text-xl" />
+        </Button>
+      </div>
 
 
       {/* Results Section */}

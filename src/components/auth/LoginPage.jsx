@@ -16,13 +16,13 @@ const LoginForm = () => {
       gsap.from(".login-card", {
         opacity: 0,
         y: 60,
-        duration: 1,
+        duration: 0.8,
         ease: "power3.out",
       });
       gsap.from(".login-input", {
         opacity: 0,
         y: 40,
-        duration: 0.8,
+        duration: 0.4,
         delay: 0.4,
         stagger: 0.15,
         ease: "power2.out",

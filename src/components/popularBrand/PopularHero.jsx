@@ -1,14 +1,14 @@
 "use client"
-import React , { useLayoutEffect, useRef } from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import gsap from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import Image from "next/image";
 
 gsap.registerPlugin(TextPlugin);
 
-const PopularHero = ({data}) => {
+const PopularHero = ({ data }) => {
 
- console.log("Banner data is " , data)
+  console.log("Banner data is ", data)
   const imageRef = useRef(null);
   const image1Ref = useRef(null);
   const image2Ref = useRef(null);
@@ -24,78 +24,80 @@ const PopularHero = ({data}) => {
         x: -150,
         opacity: 0,
         scale: 0.95,
-        duration: 1.2,
+        duration: 0.8,
       });
 
       tl.from(image1Ref.current, {
         y: -100,
         opacity: 0,
         scale: 0.95,
-        duration: 1.0,
+        duration: 0.7,
       });
       tl.from(image2Ref.current, {
         y: -100,
         opacity: 0,
         scale: 0.95,
-        duration: 1.0,
+        duration: 0.7,
       });
 
-    //   gsap.to(imageRef.current, {
-    //     y: 20,
-    //     duration: 2,
-    //     repeat: -1,
-    //     yoyo: true,
-    //     ease: "sine.inOut",
-    //   });
+      //   gsap.to(imageRef.current, {
+      //     y: 20,
+      //     duration: 2,
+      //     repeat: -1,
+      //     yoyo: true,
+      //     ease: "sine.inOut",
+      //   });
 
-    
-      
+
+
     });
 
-   
+
     return () => ctx.revert();
   }, []);
 
   return (
-   <section className="bg-gray-100 pt-[110px] px-5  pb-[10px] overflow-hidden">
-         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between gap-8">
-           <div className="w-full lg:w-[950]" ref={imageRef}>
-             <div className="rounded-2xl overflow-hidden  ">
-              <Image
-                 src={data?.banner}
-                 alt={data?.title || "Category Banner"}
-                 width={700}
-                 height={500}
-                 className="object-cover w-full h-auto"
-                 priority
-               />
-             </div>
-           </div>
-   
-           <div className="  lg:w-1/2 flex flex-col items-start justify-center gap-10 ">
-            <div className=" overflow-hidden  " ref={image1Ref} >
-              <Image
-                 src={data?.image1}
-                 alt={data?.title || "Category Banner"}
-                 width={457}
-                 height={210}
-                 className="object-cover  h-auto"
-                 priority
-               />
-             </div>
-             <div className=" overflow-hidden " ref={image2Ref}>
-              <Image
-                 src={data?.image2}
-                 alt={data?.title || "Category Banner"}
-                 width={457}
-                 height={210}
-                 className="object-cover h-auto"
-                 priority
-               />
-             </div>
-           </div>
-         </div>
-       </section>
+    <section className="bg-gray-100 pt-[100px] px-5  pb-[10px] overflow-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between gap-8">
+        <div className="w-full lg:w-[950]" ref={imageRef}>
+          <div className="rounded-2xl overflow-hidden  ">
+            <Image
+              src={data?.banner}
+              alt={data?.title || "Category Banner"}
+              width={700}
+              height={500}
+              className="object-cover w-full h-auto"
+              priority
+            />
+          </div>
+        </div>
+
+        <div className="  lg:w-1/2 flex flex-col items-start justify-center gap-10 ">
+          <div className=" overflow-hidden  " ref={image1Ref} >
+            <Image
+              src={data?.image1}
+              alt={data?.title || "Category Banner"}
+              width={457}
+              height={210}
+              loading="lazy"
+              className="object-cover  h-auto"
+             
+            />
+          </div>
+          <div className=" overflow-hidden " ref={image2Ref}>
+            <Image
+              src={data?.image2}
+              alt={data?.title || "Category Banner"}
+              width={457}
+              height={210}
+              loading="lazy"
+              className="object-cover h-auto"
+              
+            />
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
 

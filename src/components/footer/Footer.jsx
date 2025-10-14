@@ -28,7 +28,7 @@ const Footer = () => {
       label: "Company",
       items: [
         { href: "/category/fashion", name: "Fashion Coupon" },
-         { href: "/category/electronics", name: "Electronic Coupon" },
+        { href: "/category/electronics", name: "Electronic Coupon" },
         { href: "/category/homekitchen", name: "Food Coupon" },
         { href: "/category/flightshotels", name: "Travel Coupon" },
       ],
@@ -38,19 +38,19 @@ const Footer = () => {
     {
       label: "Resources",
       items: [
-         { href: "/aboutus", name: "About Us" },
-         { href: "/termandcondition", name: "Terms And Codition" },
+        { href: "/aboutus", name: "About Us" },
+        { href: "/termandcondition", name: "Terms And Codition" },
         { href: "/privacy", name: "Privacy Policy" },
       ],
     },
 
-   
+
   ];
 
   return (
     <footer className="bg-[#ffffff]  box-shadow-top text-gray-300 py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-screen-xl mx-auto">
-      
+
         <div className="flex flex-col md:flex-row justify-between items-center border-b border-[#333] pb-6 gap-4">
           <div className="text-center md:text-left">
             <h2 className="text-gray-900 text-xl font-semibold">
@@ -78,7 +78,7 @@ const Footer = () => {
           </form>
         </div>
 
-       
+
         <div className=" hidden md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 text-center sm:text-left">
           {footerNavs.map((nav, idx) => (
             <div key={idx}>
@@ -102,53 +102,51 @@ const Footer = () => {
         </div>
 
 
-        
-        
- <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  mt-3 sm:text-left md:hidden">
-      {footerNavs.map((nav, idx) => {
-        const isOpen = openIndex === idx;
 
-        return (
-          <div key={idx}>
-            <div
-              className="flex items-center justify-between sm:block cursor-pointer"
-              onClick={() => toggleSection(idx)}
-            >
-              <h4 className="font-semibold mb-3 text-black">
-                {nav.label}
-              </h4>
-             
 
-             
-              <span
-                className={`sm:hidden text-gray-800 text-lg transform transition-transform ${
-                  isOpen ? "rotate-180" : "rotate-0"
-                }`}
-              >
-                ▼
-              </span>
-            </div>
-           
-            <ul
-              className={`space-y-1 text-sm transition-all duration-300 ${
-                isOpen ? "block" : "hidden"
-              } sm:block`}
-            >
-              {nav.items.map((item, index) => (
-                <li key={index}>
-                  <Link
-                    href={item.href}
-                    className="hover:text-orange-400 transition-colors text-black"
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  mt-3 sm:text-left md:hidden">
+          {footerNavs.map((nav, idx) => {
+            const isOpen = openIndex === idx;
+
+            return (
+              <div key={idx}>
+                <div
+                  className="flex items-center justify-between sm:block cursor-pointer"
+                  onClick={() => toggleSection(idx)}
+                >
+                  <h4 className="font-semibold mb-3 text-black">
+                    {nav.label}
+                  </h4>
+
+
+
+                  <span
+                    className={`sm:hidden text-gray-800 text-lg transform transition-transform ${isOpen ? "rotate-180" : "rotate-0"
+                      }`}
                   >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        );
-      })}
-    </div>
+                    ▼
+                  </span>
+                </div>
+
+                <ul
+                  className={`space-y-1 text-sm transition-all duration-300 ${isOpen ? "block" : "hidden"
+                    } sm:block`}
+                >
+                  {nav.items.map((item, index) => (
+                    <li key={index}>
+                      <Link
+                        href={item.href}
+                        className="hover:text-orange-400 transition-colors text-black"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
 
         {/* Bottom: Social & Legal */}
         <div className="mt-10 pt-4 border-t border-[#333] flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-800">

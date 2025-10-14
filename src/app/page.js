@@ -23,8 +23,8 @@ export default function Home() {
   // JSON-LD for Corporation
   const corporationSchema = {
     "@context": "https://schema.org",
-    "@type": "Corporation",
-    name: "ShopSMaart",
+    "@type": "Organization",
+    name: "ShopSmaart",
     url: "https://shopsmaart.com/",
     logo: "https://shopsmaart.com/ShopSmaart.webp",
     sameAs: [

@@ -11,6 +11,11 @@ export const metadata = {
   alternates: {
     canonical: "./",
   },
+  icons: {
+    icon: "/logo2.png", // Path from /public
+    shortcut: "/logo2.png",
+    apple: "/logo2.png",
+  },
   // robots: {
   //   index: false,
   //   follow: false,

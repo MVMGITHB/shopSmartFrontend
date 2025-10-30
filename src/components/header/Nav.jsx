@@ -64,12 +64,18 @@ const Nav = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white z-20 shadow-md">
-      <div className="max-w-7xl mx-auto flex items-center justify-between p-4 relative">
+      <div className="max-w-7xl mx-auto flex items-center justify-between p-1 relative">
 
         <div className="flex items-center gap-2">
           <Link href="/">
 
-            <div className="abril-fatface-regular text-orange-500 text-[30px]">Shopsmart</div>
+<div className="abril-fatface-regular text-orange-500 text-[30px]">
+  <img
+    src="/logo2.png"
+    alt="Logo"
+    className="w-40 h-auto"  
+  />
+</div>
           </Link>
         </div>
 

@@ -38,6 +38,23 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
 
+
+         <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-YYC7KT3DYK"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YYC7KT3DYK');
+          `,
+          }}
+        />
+
+
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

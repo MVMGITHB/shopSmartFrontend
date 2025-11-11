@@ -27,10 +27,11 @@ const Footer = () => {
     {
       label: "Company",
       items: [
-        { href: "/category/fashion", name: "Fashion Coupon" },
-        { href: "/category/electronics", name: "Electronic Coupon" },
-        { href: "/category/homekitchen", name: "Food Coupon" },
-        { href: "/category/flightshotels", name: "Travel Coupon" },
+        { href: "/fashion", name: "Fashion Coupon" },
+        { href: "/electronics", name: "Electronic Coupon" },
+        { href: "/homekitchen", name: "Food Coupon" },
+        { href: "/flightshotels", name: "Travel Coupon" },
+        { href: "/beauty", name: "Beauty" },
       ],
     },
 
@@ -41,6 +42,8 @@ const Footer = () => {
         { href: "/aboutus", name: "About Us" },
         { href: "/termandcondition", name: "Terms And Codition" },
         { href: "/privacy", name: "Privacy Policy" },
+        { href: "/blogs", name: "Blogs" },
+
         // add blog section;
         // {href:"/blog", name:"blog"},
       ],

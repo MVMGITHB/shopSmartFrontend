@@ -24,6 +24,7 @@ import React from 'react'
 import CategoryMain from '@/components/category/CategoryMain';
 import Fashion from '@/components/fashion/Fashion';
 import NewsUi from '@/components/NewsCategory/NewsUi';
+import Nav from '@/components/header/Nav';
 
 
 const seodata = [
@@ -148,6 +149,7 @@ const page = ({ params }) => {
 
   return (
     <div>
+     
         <CategoryMain data={data}  slug={slug}/>
          {/* <Fashion/> */}
         {/* <NewsUi url="fashion" /> */}

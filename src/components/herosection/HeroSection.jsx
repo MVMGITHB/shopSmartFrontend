@@ -131,7 +131,7 @@ const HeroSection = () => {
           <div className="flex flex-wrap justify-center gap-10">
             {categories.map((cat, index) => (
               <div key={index} className="flex flex-col items-center">
-                <Link href={`/category/${cat.url}`} className="block">
+                <Link href={`${cat.url}`} className="block">
                   <div className="w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px] rounded-full overflow-hidden flex items-center justify-center transition-transform duration-300 hover:scale-110">
                     <Image
                       src={cat.img}

@@ -12,7 +12,7 @@ const Missed = () => {
 
         {/* Title */}
         <h2 className="mx-6 text-2xl md:text-3xl font-extrabold text-indigo-600 relative">
-          Our Recent Favorites
+          <span className="text-gray-900"> Our Recent </span>Favorites
           {/* Decorative underline */}
           <span className="block mt-2 h-1 w-16 mx-auto bg-gradient-to-r from-purple-700 to-indigo-500 rounded-full"></span>
         </h2>
@@ -27,6 +27,8 @@ const Missed = () => {
       <div className="w-full mx-auto max-w-7xl">
         <Crousel />
       </div>
+
+      
     </section>
   );
 };

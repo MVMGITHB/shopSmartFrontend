@@ -115,7 +115,7 @@ export default function IntegratedNewsLayout({ data }) {
   // --------------------------------------------------
 
   return (
-    <div className="min-h-screen bg-white w-full px-4 md:px-6 lg:px-10 py-6">
+    <div className="min-h-screen bg-white w-full px-4 md:px-6 lg:px-10 mt-20 py-6">
       {/* ✅ Dynamic SEO Meta Tags */}
       <Head>
         <title>{data?.title} | Trending Storie</title>
@@ -229,23 +229,23 @@ export default function IntegratedNewsLayout({ data }) {
         {/* ⬅️ Left Sidebar */}
         <aside className="order-2 lg:order-1 lg:col-span-3 space-y-6">
           <AdBanner />
-          <LatestNews />
+          {/* <LatestNews /> */}
           {/* <LatestNews news={news} /> */}
-          <AdBanner />
+          {/* <AdBanner /> */}
         </aside>
 
         {/* ➡️ Right Sidebar */}
         <aside className="order-3 lg:order-3 lg:col-span-3 space-y-6">
           <AdBanner />
-          <TopPicks />
+          {/* <TopPicks /> */}
           {/* <TopPicks news={news} /> */}
-          <AdBanner />
+          {/* <AdBanner /> */}
         </aside>
       </div>
 
       {/* Missed Section */}
-      <div className="max-w-8xl mx-auto mt-12 order-4">
-        <h2 className="text-2xl font-bold mb-4">You Might Have Missed</h2>
+      <div className="max-w-8xl mx-auto mt-12 order-4 flex justify-center">
+        {/* <h2 className="text-2xl font-bold mb-4">You Might Have Missed</h2> */}
         <Missed />
       </div>
     </div>

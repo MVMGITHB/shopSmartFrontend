@@ -6,6 +6,7 @@ import Footer from '../footer/Footer'
 import CategoryOffer from '../category/CategoryOffer'
 import { BASE_URL } from '../helper/Helper'
 import axios from 'axios'
+import Missed from '../HeroSections/Missed'
 
 const PopularMain = ({ data, slug }) => {
 
@@ -39,6 +40,9 @@ const PopularMain = ({ data, slug }) => {
       <Nav />
       <PopularHero data={data} />
       <CategoryOffer couponData={couponData} />
+      
+        <Missed />
+     
       <Footer />
 
     </div>

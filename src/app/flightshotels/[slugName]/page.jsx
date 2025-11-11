@@ -1,5 +1,3 @@
-
-
 import Article from "@/components/Article/Article";
 import { base_url } from "@/components/helper/Helper";
 // import { base_url } from "@/components/Helper/helper";
@@ -20,7 +18,7 @@ export async function generateMetadata({ params }) {
     return {
       title: data?.title || "shopsmaart",
       description: data?.subtitle || "Latest article from shopsmaart",
-      metadataBase: new URL("https://shopsmaart.com/"),
+      metadataBase: new URL("https://shopsmaart.com"),
       alternates: {
         canonical: "./",
       },
@@ -50,7 +48,7 @@ export async function generateMetadata({ params }) {
     console.error("SEO metadata error:", error);
     return {
       title: "shopsmaart",
-      description: "Latest news, blogs and stories from shopsmaart.",
+      description: "Latest news, blogs and stories from trendingstori.",
     };
   }
 }
@@ -72,7 +70,7 @@ export default async function Page({ params }) {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://shopsmaart.com/",
+          item: "https://shopsmaart.com",
         },
         {
           "@type": "ListItem",
@@ -96,7 +94,7 @@ export default async function Page({ params }) {
       author: {
         "@type": "Organization",
         name: "shopsmaart",
-        url: "https://shopsmaart.com/",
+        url: "https://shopsmaart.com",
       },
       publisher: {
         "@type": "Organization",
@@ -132,5 +130,3 @@ export default async function Page({ params }) {
     return <div>Failed to load article.</div>;
   }
 }
-
-

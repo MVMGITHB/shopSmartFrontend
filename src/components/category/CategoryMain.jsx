@@ -10,6 +10,9 @@ import NewsUi from '../NewsCategory/NewsUi'
 import Fashion from '../fashion/Fashion'
 
 const CategoryMain =  ( {data , slug} ) => {
+
+
+  // console.log("slug of the devansh is " , slug);
   
   const [couponData , setCouponData] = useState([])
 
@@ -44,7 +47,8 @@ const CategoryMain =  ( {data , slug} ) => {
       <CategoryOffer couponData={couponData}/>
       {/* news ai  */}
       {/* <NewsUi /> */}
-       <Fashion/>
+       {/* <Fashion/> */}
+        <NewsUi url={slug} />
       <Footer/>
     </div>
   )

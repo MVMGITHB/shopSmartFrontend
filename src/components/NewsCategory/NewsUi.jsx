@@ -21,6 +21,8 @@ function NewsUi({ url }) {
       );
       setHeading(res?.data[0]?.category?.name);
       setCards(res.data);
+
+      console.log(" resposne sif the blog data ", res);
     } catch (error) {
       console.log(error);
     }
@@ -40,34 +42,37 @@ function NewsUi({ url }) {
       </div>
 
       {/* Featured + List Layout */}
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Left Featured Article */}
-        {card[0] && (
-          <Link
-            href={`/${card[0]?.category?.slug}/${card[0]?.slug}`}
-            className="md:col-span-2 group"
-          >
-            <div className="flex flex-col">
-              <img
-                src={`${base_url}${card[0]?.image}`}
-                alt={card[0]?.title}
-                className="w-full h-96 object-cover rounded-lg"
-              />
-              <span className="mt-4 text-xs uppercase tracking-wide text-red-700 font-semibold">
-                {card[0]?.category?.name}
-              </span>
-              <h2 className="mt-2 text-2xl md:text-3xl font-serif font-bold group-hover:underline">
-                {card[0]?.title}
-              </h2>
-              <p className="mt-2 text-gray-600 text-base leading-relaxed line-clamp-3">
-                {card[0]?.subtitle}
-              </p>
-            </div>
-          </Link>
-        )}
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory">
+          {card.map((item, index) => (
+            <Link
+              key={index}
+              href={`/${item?.category?.slug}/${item?.slug}`}
+              className="flex-shrink-0 snap-center w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-1rem)] group"
+            >
+              <div className="flex flex-col">
+                <img
+                  src={`${base_url}${item?.image}`}
+                  alt={item?.title}
+                  className="w-full h-48 object-cover rounded-lg"
+                />
+                <span className="mt-4 text-xs uppercase tracking-wide text-red-700 font-semibold">
+                  {item?.category?.name}
+                </span>
+                <h2 className="mt-2 text-lg font-serif font-bold group-hover:underline">
+                  {item?.title}
+                </h2>
+                <p className="mt-2 text-gray-600 text-sm leading-relaxed line-clamp-3">
+                  {item?.subtitle}
+                </p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
 
-        {/* Right Column (stacked smaller articles) */}
-        <div className="flex flex-col gap-6">
+      {/* Right Column (stacked smaller articles) */}
+      {/* <div className="flex flex-col gap-6">
           {card.slice(1, 5).map((blog, index) => (
             <Link
               key={blog._id || index}
@@ -92,16 +97,15 @@ function NewsUi({ url }) {
               </div>
             </Link>
           ))}
-        </div>
-      </div>
+        </div> */}
 
       {/* Missed Section */}
-      <Missed />
+      {/* <Missed /> */}
 
       {/* ✅ Mobile Ad (only shows on mobile) */}
-      <div className="max-w-7xl mx-auto px-4 py-6 block md:hidden">
+      {/* <div className="max-w-7xl mx-auto px-4 py-6 block md:hidden">
         <AdBanner />
-      </div>
+      </div> */}
 
       {/* Grid for rest of the articles */}
       <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 border-t mt-8 pt-8">
@@ -130,9 +134,9 @@ function NewsUi({ url }) {
           </Link>
         ))}
       </div>
-      <div className="max-w-7xl mx-auto px-4 py-6 block md:hidden">
+      {/* <div className="max-w-7xl mx-auto px-4 py-6 block md:hidden">
         <AdBanner />
-      </div>
+      </div> */}
     </>
   );
 }

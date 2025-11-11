@@ -41,6 +41,8 @@ const Footer = () => {
         { href: "/aboutus", name: "About Us" },
         { href: "/termandcondition", name: "Terms And Codition" },
         { href: "/privacy", name: "Privacy Policy" },
+        // add blog section;
+        // {href:"/blog", name:"blog"},
       ],
     },
 
@@ -158,21 +160,21 @@ const Footer = () => {
             >
               <FaFacebook size={16} /> Facebook
             </Link>
-            <Link
+            {/* <Link
               href=""
               className="flex items-center gap-1 hover:text-orange-400 transition"
             >
               <FaTwitter size={16} /> Twitter
-            </Link>
-            <Link
+            </Link> */}
+            {/* <Link
               href="#"
               className="flex items-center gap-1 hover:text-orange-400 transition"
             >
               <FaGithub size={16} /> GitHub
-            </Link>
+            </Link> */}
             <Link
               href="https://www.instagram.com/shopsmaart/"
-              className="flex items-center gap-1 hover:text-orane-400 transition"
+              className="flex items-center gap-1  hover:text-orange-400 transition"
             >
               <FaInstagram size={16} /> Instagram
             </Link>

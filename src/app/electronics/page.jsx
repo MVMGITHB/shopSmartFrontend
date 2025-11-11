@@ -1,3 +1,17 @@
+// import Electronics from '@/components/electronics/Electronics'
+// import React from 'react'
+
+// const page = () => {
+//   return (
+//     <div>
+//       <Electronics />
+//     </div>
+//   )
+// }
+
+// export default page
+
+
 // import Fashion from '@/components/fashion/Fashion'
 // import NewsUi from '@/components/NewsCategory/NewsUi'
 // import React from 'react'
@@ -22,8 +36,8 @@
 import React from 'react'
 // import Fashion from '@/components/fashion/Fashion';
 import CategoryMain from '@/components/category/CategoryMain';
-import Fashion from '@/components/fashion/Fashion';
-import NewsUi from '@/components/NewsCategory/NewsUi';
+// import Fashion from '@/components/fashion/Fashion';
+// import NewsUi from '@/components/NewsCategory/NewsUi';
 
 
 const seodata = [
@@ -134,7 +148,7 @@ const categoryData = {
 const page = ({ params }) => {
 
 
- const slug = 'fashion'
+ const slug = 'electronics'
 
   
    const data = categoryData[slug];
@@ -157,3 +171,5 @@ const page = ({ params }) => {
 }
 
 export default page
+
+

@@ -6,6 +6,8 @@ import Footer from '../footer/Footer'
 import CategoryOffer from './CategoryOffer'
 import axios from "axios";
 import { BASE_URL } from '../helper/Helper'
+import NewsUi from '../NewsCategory/NewsUi'
+import Fashion from '../fashion/Fashion'
 
 const CategoryMain =  ( {data , slug} ) => {
   
@@ -40,6 +42,9 @@ const CategoryMain =  ( {data , slug} ) => {
       <Nav/>
       <CategoryHero data={data}/>
       <CategoryOffer couponData={couponData}/>
+      {/* news ai  */}
+      {/* <NewsUi /> */}
+       <Fashion/>
       <Footer/>
     </div>
   )

@@ -14,12 +14,12 @@ import AdBanner from "../AdBanner/AdBanner";
 import Missed from "../HeroSections/Missed";
 import LatestNews from "../Hero/LatestNews";
 import TopPicks from "../Hero/TopPicks";
+import Link from "next/link";
 // import Missed from "../Missed/Missed";
 
 export default function IntegratedNewsLayout({ data }) {
+  console.log("data is ", data);
 
-
-  console.log("data is " , data)
   const [currentTime, setCurrentTime] = useState(new Date());
   const [news, setNews] = useState([]);
 
@@ -128,7 +128,6 @@ export default function IntegratedNewsLayout({ data }) {
         <meta name="keywords" content={data?.tags?.join(", ")} />
         <meta name="author" content={data?.author?.name || "Trending Storie"} />
       </Head>
-
       {/* ✅ Structured Data */}
       <script
         type="application/ld+json"
@@ -144,7 +143,6 @@ export default function IntegratedNewsLayout({ data }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       )}
-
       {/* 🔲 3-column responsive grid */}
       <div className="grid grid-cols-1 lg:grid-cols-14 gap-6 w-full">
         {/* 📰 Main Article */}
@@ -162,7 +160,11 @@ export default function IntegratedNewsLayout({ data }) {
               <p className="text-lg text-gray-600 italic">{data.subtitle}</p>
             )}
             <div className="flex items-center gap-2 text-sm text-gray-500">
-              <span>{data?.author?.name || "trendingstori Team"}</span>
+              {/* <Link href={`/author/${data?.author?.slug}`}> */}
+                <span>
+                  {data?.author?.name || "trendingstori Team"}
+                </span>
+              {/* </Link> */}
               <span>•</span>
               <span>{getReadTime(data?.content)} min read</span>
               <span>•</span>
@@ -242,12 +244,7 @@ export default function IntegratedNewsLayout({ data }) {
           {/* <AdBanner /> */}
         </aside>
       </div>
-
-      {/* Missed Section */}
-      <div className="max-w-8xl mx-auto mt-12 order-4 flex justify-center">
-        {/* <h2 className="text-2xl font-bold mb-4">You Might Have Missed</h2> */}
-        <Missed />
-      </div>
+      {/* Missed Section */}-
     </div>
   );
 }

@@ -100,7 +100,7 @@ export default function Page({ params }) {
 
    const slug = params.slug;
 
-  console.log("paramzs is " , slug)
+  // console.log("paramzs is " , slug)
   
   return <AuthorPage slug={slug} />;
 }

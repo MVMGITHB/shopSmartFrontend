@@ -6,6 +6,8 @@ import Link from "next/link";
 import { base_url } from "../helper/Helper";
 
 import Image from "next/image";
+import Nav from "../header/Nav";
+import Footer from "../footer/Footer";
 
 export default function AuthorPage({ slug }) {
   const [author, setAuthor] = useState(null);
@@ -13,16 +15,17 @@ export default function AuthorPage({ slug }) {
   const [error, setError] = useState("");
   // const [fullNameUser , setFullNameUser] = useState("")
 
-
-  console.log("author " ,slug )
+  // console.log("author ", slug);
 
   useEffect(() => {
     async function fetchAuthor() {
       try {
-        const res = await fetch(`${base_url}/api/auth/singleUserbyslug/${slug}`);
+        const res = await fetch(
+          `${base_url}/api/user/singleUserbyslug/${slug}`
+        );
         if (!res.ok) throw new Error("Failed to fetch data");
         const data = await res.json();
-        console.log("data isj s   " , data[0]);
+        // console.log("data isj s   ", data[0]);
         setAuthor(data[0]);
       } catch (err) {
         setError("Failed to load author data.");
@@ -33,8 +36,7 @@ export default function AuthorPage({ slug }) {
     fetchAuthor();
   }, [slug]);
 
-
-  console.log("authpor " , author)
+  // console.log("authpor ", author);
 
   if (loading)
     return (
@@ -51,8 +53,8 @@ export default function AuthorPage({ slug }) {
   return (
     <>
       {/* <AuthorJsonLd author={author} /> */}
-
-      <section className="max-w-6xl mx-auto px-4 py-12">
+      <Nav />
+      <section className="max-w-6xl mx-auto px-4 py-26">
         <div className="bg-white shadow-xl rounded-3xl p-6 border border-gray-200">
           <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
             <img
@@ -68,22 +70,32 @@ export default function AuthorPage({ slug }) {
             />
 
             <div className="flex-1 text-center md:text-left space-y-2">
-              <h1 className="text-4xl font-bold text-gray-900">{author.name}</h1>
+              <h1 className="text-4xl font-bold text-gray-900">
+                {author.name}
+              </h1>
 
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                <span className="bg-blue-100 text-blue-800 text-sm px-4 py-1 rounded-full">
+                {/* <span className="bg-blue-100 text-blue-800 text-sm px-4 py-1 rounded-full">
                   🧑‍💼 {author.role}
                 </span>
                 <span className="bg-yellow-100 text-yellow-800 text-sm px-4 py-1 rounded-full">
                   🟢 {author.status}
-                </span>
+                </span> */}
                 {author.tag && (
                   <span className="bg-green-100 text-green-800 text-sm px-4 py-1 rounded-full">
                     🏷️ {author.tag}
                   </span>
                 )}
                 <span className="text-gray-600 text-sm">
-                  📅 Joined: {joinDate}
+                  📅 Joined:
+                   {/* {joinDate} */}
+                  <time dateTime={author?.createdAt}>
+                    {new Intl.DateTimeFormat("en-GB", {
+                      day: "2-digit",
+                      month: "short",
+                      year: "numeric",
+                    }).format(new Date(author?.createdAt))}
+                  </time>
                 </span>
               </div>
 
@@ -153,9 +165,8 @@ export default function AuthorPage({ slug }) {
               ))}
           </div>
         )}
-
-
       </section>
+      <Footer />
     </>
   );
 }

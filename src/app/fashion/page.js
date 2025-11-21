@@ -139,7 +139,7 @@ const page = ({ params }) => {
 
   
    const data = categoryData[slug];
-   console.log("data " , data)
+  //  console.log("data " , data)
    
 //     const data = categoryData[slug] || {
 //     title: "Category Not Found",

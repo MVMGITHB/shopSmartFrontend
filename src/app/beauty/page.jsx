@@ -34,7 +34,7 @@ const page = () => {
 
   
    const data = categoryData[slug];
-   console.log("data " , data)
+  //  console.log("data " , data)
   return (
     <div>
         <CategoryMain data={data}  slug={slug}/>

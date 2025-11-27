@@ -6,12 +6,12 @@ import Link from "next/link";
 export default function AdBanner() {
   return (
     <Link
-      href="https://tracking.ajio.business/click?pid=87&offer_id=2&sub1=pass_your_subid%20&redirect=https://www.ajio.com/s/50to90percentoff-140961"
+      href="http://www.intellectmedia.net/trk/click.asp?cid=3203&pid=661&did=23840&code=326"
       target="_blank" // opens in new tab
       rel="noopener noreferrer" // security best practice
     >
       <Image
-        src="/images/ajionew.jpeg"
+        src="/images/aditybirla.png"
         alt="Advertisement Left"
         width={300}
         height={250}

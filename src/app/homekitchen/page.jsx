@@ -91,12 +91,12 @@ export async function generateMetadata({ params }) {
     description: seo.description,
     metadataBase: new URL("https://shopsmaart.com"),
     alternates: {
-      canonical: "/electronics",
+      canonical: "/homekitchen",
     },
     openGraph: {
       title: seo.title,
       description: seo.description,
-      url: `https://shopsmaart.com/electronics`,
+      url: `https://shopsmaart.com/homekitchen`,
       siteName: "ShopSmaart",
       type: "website",
     },

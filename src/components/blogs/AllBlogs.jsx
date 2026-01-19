@@ -22,11 +22,11 @@ const AllBlogs = () => {
 
   return (
     <div className="">
-      <div className="max-w-7xl mx-auto px-4 my-10">
+      <div className="max-w-7xl mx-auto px-4 mb-7 mt-25">
         {/* Section Heading */}
-        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-gray-800 text-center">
+        <h1 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800 text-center">
           Latest Blogs
-        </h2>
+        </h1>
 
         {/* Responsive Grid Layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -45,9 +45,9 @@ const AllBlogs = () => {
                 <span className="text-xs uppercase tracking-wide text-red-700 font-semibold">
                   {item?.category?.name}
                 </span>
-                <h1 className="mt-2 text-lg font-serif font-bold hover:text-blue-600">
+                <h2 className="mt-2 text-lg font-serif font-bold hover:text-blue-600">
                   {item?.title}
-                </h1>
+                </h2>
                 <p className="mt-2 text-gray-600 text-sm leading-relaxed line-clamp-3">
                   {item?.subtitle}
                 </p>

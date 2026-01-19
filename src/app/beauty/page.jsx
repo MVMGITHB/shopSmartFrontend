@@ -28,6 +28,79 @@ const categoryData = {
     banner: "/fashion/Frame72.png",
   },
 };
+
+const seodata = [
+  {
+    slug: "fashion",
+    title: "Fashion Coupons & Promo Codes | ShopSmaart",
+    description:
+      "Discover the latest fashion coupons and promo codes on ShopSmaart. Save on clothing, footwear, and accessories with verified deals from top brands."
+  },
+  {
+    slug: "electronics",
+    title: "Electronics Deals & Discount Coupons | ShopSmaart",
+    description:
+      "Find the best electronics deals with ShopSmaart. Get verified discount coupons for mobiles, laptops, gadgets, and accessories at unbeatable prices."
+  },
+  {
+    slug: "homekitchen",
+    title: "Home & Kitchen Coupons and Deals | ShopSmaart",
+    description:
+      "Save more on home and kitchen essentials with ShopSmaart coupons. Explore deals on appliances, cookware, décor, and daily home needs."
+  },
+  {
+    slug: "beauty",
+    title: "Beauty & Grooming Deals and Promo Codes | ShopSmaart",
+    description:
+      "Shop beauty and grooming products for less using ShopSmaart promo codes. Save on skincare, haircare, makeup, and personal care essentials."
+  },
+  {
+    slug: "flightshotels",
+    title: "Flight & Hotel Deals with Promo Codes | ShopSmaart",
+    description:
+      "Book flights and hotels at lower prices with ShopSmaart promo codes. Unlock exclusive travel deals and save on your next trip."
+  }
+];
+
+
+
+
+export async function generateMetadata({ params }) {
+  const { slug } = params;
+
+  // console.log("slug" , slug)
+
+  const seo = seodata.find((item) => item.slug === "beauty");
+  // console.log("seo " , seo)
+
+  if (!seo) {
+    return {
+      title: "Page Not Found | ShopSmaart",
+      description: "This category does not exist.",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
+  }
+
+  return {
+    title: seo.title,
+    description: seo.description,
+    metadataBase: new URL("https://shopsmaart.com"),
+    alternates: {
+      canonical: "/beauty",
+    },
+    openGraph: {
+      title: seo.title,
+      description: seo.description,
+      url: `https://shopsmaart.com/beauty`,
+      siteName: "ShopSmaart",
+      type: "website",
+    },
+  };
+}
+
 const page = () => {
 
      const slug = 'beauty'

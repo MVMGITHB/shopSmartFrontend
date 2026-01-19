@@ -126,7 +126,7 @@ const HeroSection = () => {
 
         {/* Categories */}
         <div className="text-center">
-          <h2 className="text-2xl font-semibold mb-8">Top Categories</h2>
+          <h1 className="text-2xl font-semibold mb-8">Top Categories</h1>
 
           <div className="flex flex-wrap justify-center gap-10">
             {categories.map((cat, index) => (

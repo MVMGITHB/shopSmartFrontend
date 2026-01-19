@@ -33,7 +33,19 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
+
+   async redirects() {
+    return [
+      {
+        source: "/cdn-cgi/l/email-protection",
+        destination: "/",
+        permanent: true, // 301
+      },
+    ];
+  },
+  
   reactStrictMode: true,
+  
 
   images: {
     remotePatterns: [

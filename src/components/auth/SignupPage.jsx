@@ -63,9 +63,9 @@ const SignupPage = () => {
 
         <div className="absolute inset-0 bg-gradient-to-br from-orange-300/20 to-transparent animate-pulse blur-3xl"></div>
 
-        <h2 className="relative text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-8">
+        <h1 className="relative text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-8">
           Create Account
-        </h2>
+        </h1>
 
         <form onSubmit={handleSubmit} className="relative space-y-6">
 

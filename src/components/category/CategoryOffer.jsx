@@ -140,9 +140,9 @@ const CategoryOffer = ({ couponData }) => {
                     </div>
 
 
-                    <h3 className="text-base sm:text-lg font-semibold text-gray-800 text-center mb-2">
+                    <h2 className="text-base sm:text-lg font-semibold text-gray-800 text-center mb-2">
                       {offer?.title}
-                    </h3>
+                    </h2>
 
                     <p className="text-xs sm:text-sm text-gray-600 text-center mb-4">
                       {offer?.description1?.[0]}

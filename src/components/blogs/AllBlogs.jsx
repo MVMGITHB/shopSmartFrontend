@@ -45,9 +45,9 @@ const AllBlogs = () => {
                 <span className="text-xs uppercase tracking-wide text-red-700 font-semibold">
                   {item?.category?.name}
                 </span>
-                <h2 className="mt-2 text-lg font-serif font-bold hover:text-blue-600">
+                <h1 className="mt-2 text-lg font-serif font-bold hover:text-blue-600">
                   {item?.title}
-                </h2>
+                </h1>
                 <p className="mt-2 text-gray-600 text-sm leading-relaxed line-clamp-3">
                   {item?.subtitle}
                 </p>

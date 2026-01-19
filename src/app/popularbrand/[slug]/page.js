@@ -4,32 +4,36 @@ import React from 'react';
 
 const seoBrand = [
   {
-  slug:"flipkart",
-  title:"Flipkart | shopsmart",
-  description:"High Style , High Saving Your Fashion Sale Starts Here!"
+    slug: "flipkart",
+    title: "Flipkart Coupons & Offers | ShopSmaart Deals",
+    description:
+      "Save more on Flipkart with verified coupons and exclusive offers from ShopSmaart. Get the best deals on fashion, electronics, home, and more."
   },
   {
-  slug:"ajio",
-  title:"ajio | shopsmart | Gadgets You’ll Love, Prices You’ll Love More",
-  description:"High Style , High Saving Your Fashion Sale Starts Here!"
+    slug: "ajio",
+    title: "AJIO Coupons & Promo Codes | ShopSmaart",
+    description:
+      "Find the latest AJIO coupons and promo codes on ShopSmaart. Save on trendy fashion, footwear, and accessories with verified discounts."
   },
   {
-  slug:"levis",
-  title:"levis |shopsmart ",
-  description:"High Style , High Saving Your Fashion Sale Starts Here!"
+    slug: "levis",
+    title: "Levi’s Coupons & Discount Codes | ShopSmaart",
+    description:
+      "Shop original Levi’s apparel at lower prices using ShopSmaart coupons. Discover verified discount codes for jeans, jackets, and clothing."
   },
   {
-  slug:"myntra",
-  title:"myntra | shopsmart",
-  description:"High Style , High Saving Your Fashion Sale Starts Here!"
+    slug: "myntra",
+    title: "Myntra Coupons & Offers | ShopSmaart Deals",
+    description:
+      "Get the best Myntra coupons on fashion and lifestyle products with ShopSmaart. Save on clothing, footwear, accessories, and beauty brands."
   },
   {
-  slug:"markspencer",
-  title:"markspencer| shopsmart",
-  description:"High Style , High Saving Your Fashion Sale Starts Here!"
+    slug: "markspencer",
+    title: "Marks & Spencer Coupons | ShopSmaart Offers",
+    description:
+      "Save on premium fashion and home essentials with Marks & Spencer coupons from ShopSmaart. Find verified deals and exclusive offers."
   }
-
-]
+];
 
 
 

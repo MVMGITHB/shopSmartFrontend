@@ -39,82 +39,78 @@ import CategoryMain from '@/components/category/CategoryMain';
 // import Fashion from '@/components/fashion/Fashion';
 // import NewsUi from '@/components/NewsCategory/NewsUi';
 
-
 const seodata = [
   {
-    slug:"fashion",
-    title:"Fashion Coupons & Promo Codes | ShopSmaart Deals on Clothing & Accessories",
-    description:"Save big on the latest fashion trends with ShopSmaart. Find verified coupons and promo codes for clothing, shoes, accessories, and more—shop stylishly and smartly."
-  },
-
-  {
-    slug:"electronics",
-    title:"Electronics Deals & Discount Coupons | ShopSmaart Deals on Electronics",
-    description:"Get the best prices on electronics with ShopSmaart. Discover promo codes for smartphones, laptops, gadgets, and more—upgrade your tech without overspending."
-
+    slug: "fashion",
+    title: "Fashion Coupons & Promo Codes | ShopSmaart",
+    description:
+      "Discover the latest fashion coupons and promo codes on ShopSmaart. Save on clothing, footwear, and accessories with verified deals from top brands."
   },
   {
-    slug:"homekitchen",
-    title:"Home & Kitchen Coupons | ShopSmaart Deals for Smart Living",
-    description:"Transform your space with savings on home and kitchen essentials. ShopSmaart offers top coupons for appliances, cookware, décor, and more—comfort meets value."
+    slug: "electronics",
+    title: "Electronics Deals & Discount Coupons | ShopSmaart",
+    description:
+      "Find the best electronics deals with ShopSmaart. Get verified discount coupons for mobiles, laptops, gadgets, and accessories at unbeatable prices."
   },
-   {
-    slug:"beauty",
-    title:"Beauty & Grooming Promo Codes | ShopSmaart Discounts on Skincare & More",
-    description:"Glow for less with ShopSmaart’s beauty and grooming deals. Find coupons for skincare, haircare, makeup, and personal care products—look good, save better"
+  {
+    slug: "homekitchen",
+    title: "Home & Kitchen Coupons and Deals | ShopSmaart",
+    description:
+      "Save more on home and kitchen essentials with ShopSmaart coupons. Explore deals on appliances, cookware, décor, and daily home needs."
   },
-   {
-    slug:"flightshotels",
-    title:"Travel Deals on Flights & Hotels | ShopSmaart Promo Codes for Getaways",
-    description:"Plan your next trip with ShopSmaart. Unlock exclusive coupons for flights, hotels, and vacation packages—travel smart and save more on every journey."
+  {
+    slug: "beauty",
+    title: "Beauty & Grooming Deals and Promo Codes | ShopSmaart",
+    description:
+      "Shop beauty and grooming products for less using ShopSmaart promo codes. Save on skincare, haircare, makeup, and personal care essentials."
+  },
+  {
+    slug: "flightshotels",
+    title: "Flight & Hotel Deals with Promo Codes | ShopSmaart",
+    description:
+      "Book flights and hotels at lower prices with ShopSmaart promo codes. Unlock exclusive travel deals and save on your next trip."
   }
-]
+];
 
 
 
-// export async function generateMetadata({ params }) {
-//   const { slug } = await params;
 
-//   // console.log("slug naem ", slug)
+export async function generateMetadata({ params }) {
+  const { slug } = params;
 
-//   try {
-    
-//     const post = seodata.filter((item) => {
-//   return item.slug === slug;
-// });
+  console.log("slug" , slug)
 
+  const seo = seodata.find((item) => item.slug === "electronics");
+  console.log("seo " , seo)
 
-// // console.log("post dat ", post)
+  if (!seo) {
+    return {
+      title: "Page Not Found | ShopSmaart",
+      description: "This category does not exist.",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
+  }
 
+  return {
+    title: seo.title,
+    description: seo.description,
+    metadataBase: new URL("https://shopsmaart.com"),
+    alternates: {
+      canonical: "/electronics",
+    },
+    openGraph: {
+      title: seo.title,
+      description: seo.description,
+      url: `https://shopsmaart.com/electronics`,
+      siteName: "ShopSmaart",
+      type: "website",
+    },
+  };
+}
 
-//     if (!post) {
-//       return {
-//         title: "Page not found",
-//         description: "This Page post could not be found.",
-//         // robots: {
-//         //   index: false,
-//         //   follow: false,
-//         // },
-//       };
-//     }
-
-//    return {
-//       title: `${post[0].title}`,
-//       description: `${post[0].description}`,
-//       metadataBase: new URL('https://shopsmaart.com/'),
-//     alternates: {
-//       canonical: './',
-
-//     },
-    
-//     };
-//   } catch (error) {
-//     return {
-//       title: "Error loading post",
-//       description: "An error occurred while fetching post data.",
-//     };
-//   }
-// }
 
 
 const categoryData = {
@@ -152,19 +148,12 @@ const page = ({ params }) => {
 
   
    const data = categoryData[slug];
-  //  console.log("data " , data)
-   
-//     const data = categoryData[slug] || {
-//     title: "Category Not Found",
-//     desc: "The page you're looking for doesn't exist.",
-//     banner: "/default-banner.png",
-//   };
+  
 
   return (
     <div>
         <CategoryMain data={data}  slug={slug}/>
-         {/* <Fashion/> */}
-        {/* <NewsUi url="fashion" /> */}
+        
       
     </div>
   )

@@ -36,9 +36,9 @@ function NewsUi({ url }) {
     <>
       {/* Section Header */}
       <div className="max-w-7xl mx-auto px-4 py-8">
-        <h1 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 border-b pb-4">
+        <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 border-b pb-4">
           {heading ? `${heading} News` : "Latest Business News"}
-        </h1>
+        </h2>
       </div>
 
       {/* Featured + List Layout */}
